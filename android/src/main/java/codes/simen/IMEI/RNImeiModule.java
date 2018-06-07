@@ -34,6 +34,10 @@ public class RNImeiModule extends ReactContextBaseJavaModule {
         }
         constants.put("imei", imei);
 
+        // IMSI
+        String imsi = tm.getSubscriberId().trim();
+        constants.put("imsi", imsi);
+
         return constants;
     }
 
