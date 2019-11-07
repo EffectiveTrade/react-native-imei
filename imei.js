@@ -7,6 +7,7 @@ var ReactNative = require('react-native');
 if (ReactNative.Platform.OS === "android") {
     module.exports = {
         getImei: function () {
+            return ReactNative.NativeModules.IMEI.getImei();
             return ReactNative.NativeModules.IMEI.imei;
         },
         getImsi: function () {
