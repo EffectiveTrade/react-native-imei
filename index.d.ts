@@ -1,5 +1,5 @@
 interface IMEI {
-    getImei(): string;
+    getImei(): string[];
     getImsi(): string;
 }
 

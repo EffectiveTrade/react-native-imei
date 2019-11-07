@@ -52,6 +52,17 @@ public class RNImeiModule extends ReactContextBaseJavaModule {
         }
     }
 
+        @SuppressLint({"MissingPermission", "HardwareIds"})
+        @ReactMethod
+        public void getImsi(Promise promise) {
+            if (!hasPermission()) {
+                promise.reject(new RuntimeException("Missing permission " + Manifest.permission.READ_PHONE_STATE));
+            } else {
+                String imsi = tm.getSubscriberId().trim();
+                promise.resolve(imsi);
+            }
+        }
+
     private boolean hasPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             return reactContext.checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED;
