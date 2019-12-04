@@ -58,7 +58,10 @@ public class RNImeiModule extends ReactContextBaseJavaModule {
             if (!hasPermission()) {
                 promise.reject(new RuntimeException("Missing permission " + Manifest.permission.READ_PHONE_STATE));
             } else {
-                String imsi = tm.getSubscriberId().trim();
+                String imsi = tm.getSubscriberId();
+                if(imsi != null) {
+                    imsi = imsi.trim();
+                }
                 promise.resolve(imsi);
             }
         }

@@ -1,6 +1,6 @@
 {
   "name": "@EffectiveTrade/react-native-imei",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Get IMEI in react-native (Android only)",
   "author": "dmitriy@chudnyi.com",
   "main": "imei.js",
