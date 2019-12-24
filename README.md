@@ -1,3 +1,6 @@
+## Deprecated: Использовать репозиторий https://git.effectivetrade.ru/shared/react-native-imei
+
+
 ## react-native-imei
 
 A react native library for Android, will return IMEI (International Mobile Equipment Identity) when app is being run on an Android device and has READ_PHONE_STATE permission.
